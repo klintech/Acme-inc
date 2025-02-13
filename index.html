@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acme Inc - Innovative Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+</head>
+<body class="font-sans">
+    <header class="bg-white shadow-md fixed w-full z-50 transition-all duration-300" id="main-header">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-blue-600">Acme Inc</a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-blue-600 transition duration-300">Home</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-blue-600 transition duration-300">About</a>
+                    <a href="#services" class="nav-link text-gray-700 hover:text-blue-600 transition duration-300">Services</a>
+                    <a href="#projects" class="nav-link text-gray-700 hover:text-blue-600 transition duration-300">Projects</a>
+                    <a href="mission.html" class="nav-link text-gray-700 hover:text-blue-600 transition duration-300">Our Mission</a>
+                    <a href="contact.html" class="nav-link text-gray-700 hover:text-blue-600 transition duration-300">Contact</a>
+                </div>
+                <button id="menu-toggle" class="md:hidden focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-md">
+            <a href="#home" class="block py-2 px-4 text-sm hover:bg-gray-200 transition duration-300">Home</a>
+            <a href="#about" class="block py-2 px-4 text-sm hover:bg-gray-200 transition duration-300">About</a>
+            <a href="#services" class="block py-2 px-4 text-sm hover:bg-gray-200 transition duration-300">Services</a>
+            <a href="#projects" class="block py-2 px-4 text-sm hover:bg-gray-200 transition duration-300">Projects</a>
+            <a href="mission.html" class="block py-2 px-4 text-sm hover:bg-gray-200 transition duration-300">Our Mission</a>
+            <a href="contact.html" class="block py-2 px-4 text-sm hover:bg-gray-200 transition duration-300">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="bg-gradient-to-r from-blue-600 to-purple-600 min-h-screen flex items-center relative overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <svg class="w-full h-full" viewBox="0 0 1440 800" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#4F46E5" fill-opacity="0.2" d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                </svg>
+            </div>
+            <div class="container mx-auto px-6 text-center relative z-10">
+                <h1 class="text-5xl sm:text-7xl text-white font-bold mb-8 leading-tight">Innovate. Create. <span class="text-yellow-300 elevate-text">Elevate.</span></h1>
+                <p class="text-xl sm:text-2xl text-white mb-12 max-w-3xl mx-auto">Empowering businesses with cutting-edge solutions for tomorrow's challenges. Experience the future of technology with Acme Inc.</p>
+                <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#services" class="bg-white text-blue-600 py-3 px-8 rounded-full text-lg font-semibold hover:bg-gray-100 transition duration-300 transform hover:scale-105">Explore Services</a>
+                    <a href="#projects" class="bg-transparent border-2 border-white text-white py-3 px-8 rounded-full text-lg font-semibold hover:bg-white hover:text-blue-600 transition duration-300 transform hover:scale-105">View Projects</a>
+                </div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0">
+                <svg class="w-full h-24 text-white" viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="currentColor" d="M0,64L80,58.7C160,53,320,43,480,48C640,53,800,75,960,80C1120,85,1280,75,1360,69.3L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+                </svg>
+            </div>
+        </section>
+
+        <section id="about" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-8">About Us</h2>
+                <div class="flex flex-wrap items-center">
+                    <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                        <div class="image-placeholder" data-width="600" data-height="400">
+                            <div class="spinner"></div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 md:pl-12">
+                        <p class="text-lg mb-6">Acme Inc is a leading innovator in technology solutions. We specialize in creating cutting-edge products that solve real-world problems.</p>
+                        <p class="text-lg mb-6">Our team of experts is dedicated to pushing the boundaries of what's possible, always striving to deliver excellence in every project we undertake.</p>
+                        <a href="mission.html" class="text-blue-600 font-semibold hover:text-blue-800">Learn more about our mission →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="bg-gray-100 py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-8">Our Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Web Development</h3>
+                        <p>Custom web solutions tailored to your business needs.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Mobile Apps</h3>
+                        <p>Innovative mobile applications for iOS and Android.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Cloud Solutions</h3>
+                        <p>Scalable and secure cloud infrastructure services.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-8">Our Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+                    <!-- Project cards will be dynamically added here -->
+                </div>
+            </div>
+        </section>
+
+        <section id="cta" class="bg-blue-600 py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold text-white mb-4">Ready to Elevate Your Business?</h2>
+                <p class="text-xl text-white mb-8">Let's work together to bring your ideas to life.</p>
+                <a href="contact.html" class="bg-white text-blue-600 py-3 px-8 rounded-full text-lg font-semibold hover:bg-gray-100 transition duration-300 inline-block">Get in Touch</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Acme Inc. All rights reserved.</p>
+            <div class="mt-4">
+                <a href="#" class="text-gray-400 hover:text-white mx-2">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-white mx-2">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+
