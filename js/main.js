@@ -22,6 +22,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
           behavior: "smooth",
         })
       }
+      // Close mobile menu if it's open
+      if (mobileMenu && !mobileMenu.classList.contains("hidden")) {
+        mobileMenu.classList.add("hidden")
+      }
     })
   })
 
@@ -44,33 +48,37 @@ document.addEventListener("DOMContentLoaded", (event) => {
     {
       title: "E-commerce Platform",
       description: "A fully responsive online store with secure payment integration.",
-      image: "images/E-commerce Platform.jpeg",
+      image: "images/E-commerce.jpeg",
     },
     {
       title: "Mobile Banking App",
       description: "Secure and user-friendly mobile banking solution.",
-      image: "images/Mobile Banking App.jpeg",
+      image: "images/Mobile-Banking.jpeg",
     },
     {
       title: "AI-powered Analytics",
       description: "Advanced analytics platform using machine learning algorithms.",
-      image: "https://via.placeholder.com/300x200?text=AI+Analytics",
+      image: "images/AI-powered.jpeg",
     },
   ]
 
   const projectsContainer = document.querySelector("#projects-grid")
-  projects.forEach((project) => {
-    const card = document.createElement("div")
-    card.className = "bg-white rounded-lg shadow-md overflow-hidden shadow-hover"
-    card.innerHTML = `
-            <img src="${project.image}" alt="${project.title}" class="w-full h-48 object-cover">
-            <div class="p-6">
-                <h3 class="text-xl font-semibold mb-2">${project.title}</h3>
-                <p class="text-gray-600">${project.description}</p>
-            </div>
-        `
-    projectsContainer.appendChild(card)
-  })
+  if (projectsContainer) {
+    projects.forEach((project) => {
+      const card = document.createElement("div")
+      card.className = "bg-white rounded-lg shadow-md overflow-hidden shadow-hover"
+      card.innerHTML = `
+                <div class="image-placeholder" data-width="300" data-height="200">
+                    <div class="spinner"></div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">${project.title}</h3>
+                    <p class="text-gray-600">${project.description}</p>
+                </div>
+            `
+      projectsContainer.appendChild(card)
+    })
+  }
 
   // Navbar scroll effect
   const header = document.getElementById("main-header")
@@ -100,9 +108,38 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   // Parallax effect for hero section
   const hero = document.querySelector("#home")
-  window.addEventListener("scroll", () => {
-    const scrollPosition = window.pageYOffset
-    hero.style.backgroundPositionY = `${scrollPosition * 0.5}px`
+  if (hero) {
+    window.addEventListener("scroll", () => {
+      const scrollPosition = window.pageYOffset
+      hero.style.backgroundPositionY = `${scrollPosition * 0.5}px`
+    })
+  }
+
+  // Image placeholder functionality
+  const imagePlaceholders = document.querySelectorAll(".image-placeholder")
+  imagePlaceholders.forEach((placeholder) => {
+    const width = placeholder.dataset.width
+    const height = placeholder.dataset.height
+    placeholder.style.width = `${width}px`
+    placeholder.style.height = `${height}px`
+
+    const img = new Image()
+    img.src = `https://via.placeholder.com/${width}x${height}`
+    img.onload = () => {
+      placeholder.innerHTML = ""
+      placeholder.appendChild(img)
+    }
   })
+
+  // Form submission
+  const contactForm = document.getElementById("contact-form")
+  if (contactForm) {
+    contactForm.addEventListener("submit", (e) => {
+      e.preventDefault()
+      // Here you would typically send the form data to a server
+      alert("Thank you for your message. We will get back to you soon!")
+      contactForm.reset()
+    })
+  }
 })
 

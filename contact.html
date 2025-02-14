@@ -3,114 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact TechNova - Get in Touch</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-        body {
-            font-family: 'Poppins', sans-serif;
-        }
-    </style>
+    <title>Contact Us - Acme Inc</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gray-100">
-    <nav class="bg-blue-600 text-white p-4 fixed w-full z-10">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold">TechNova</a>
-            <ul class="hidden md:flex space-x-4">
-                <li><a href="index.html" class="hover:text-blue-200">Home</a></li>
-                <li><a href="about.html" class="hover:text-blue-200">About</a></li>
-                <li><a href="services.html" class="hover:text-blue-200">Services</a></li>
-                <li><a href="portfolio.html" class="hover:text-blue-200">Portfolio</a></li>
-                <li><a href="contact.html" class="hover:text-blue-200">Contact</a></li>
-            </ul>
-            <button class="md:hidden" id="mobile-menu-button">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </nav>
-
-    <div class="md:hidden">
-        <ul id="mobile-menu" class="hidden bg-blue-500 text-white p-4 absolute w-full">
-            <li><a href="index.html" class="block py-2">Home</a></li>
-            <li><a href="about.html" class="block py-2">About</a></li>
-            <li><a href="services.html" class="block py-2">Services</a></li>
-            <li><a href="portfolio.html" class="block py-2">Portfolio</a></li>
-            <li><a href="contact.html" class="block py-2">Contact</a></li>
-        </ul>
-    </div>
-
-    <header class="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-32">
-        <div class="container mx-auto text-center">
-            <h1 class="text-5xl font-bold mb-4">Contact Us</h1>
-            <p class="text-xl mb-8">Get in Touch with Our Team</p>
-        </div>
+<body class="font-sans">
+    <header class="bg-white shadow-md fixed w-full z-50 transition-all duration-300" id="main-header">
+        <!-- Header content (same as index.html) -->
     </header>
 
-    <main class="py-16">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                    <h2 class="text-3xl font-bold mb-8">Send Us a Message</h2>
-                    <form id="contact-form" class="space-y-4">
-                        <div>
-                            <label for="name" class="block mb-2">Name</label>
-                            <input type="text" id="name" name="name" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+    <main class="pt-16">
+        <section class="bg-blue-600 py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl font-bold text-white mb-4">Contact Us</h1>
+                <p class="text-xl text-white">Get in touch with our team</p>
+            </div>
+        </section>
+
+        <section class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-wrap -mx-4">
+                    <div class="w-full md:w-1/2 px-4 mb-8 md:mb-0">
+                        <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
+                        <p class="text-lg mb-6">We'd love to hear from you. Whether you have a question about our services, pricing, or just want to say hello, we're here to help.</p>
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold mb-2">Our Office</h3>
+                            <p>123 Tech Street, Innovation City</p>
+                            <p>State, Country 12345</p>
                         </div>
-                        <div>
-                            <label for="email" class="block mb-2">Email</label>
-                            <input type="email" id="email" name="email" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold mb-2">Contact Information</h3>
+                            <p>Email: info@acmeinc.com</p>
+                            <p>Phone: (123) 456-7890</p>
                         </div>
-                        <div>
-                            <label for="subject" class="block mb-2">Subject</label>
-                            <input type="text" id="subject" name="subject" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        <div>
-                            <label for="message" class="block mb-2">Message</label>
-                            <textarea id="message" name="message" rows="5" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-                        </div>
-                        <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition duration-300">Send Message</button>
-                    </form>
-                </div>
-                <div>
-                    <h2 class="text-3xl font-bold mb-8">Contact Information</h2>
-                    <div class="space-y-4">
-                        <div class="flex items-center space-x-4">
-                            <i class="fas fa-map-marker-alt text-2xl text-blue-600"></i>
-                            <p>123 Tech Street, Silicon Valley, CA 94000</p>
-                        </div>
-                        <div class="flex items-center space-x-4">
-                            <i class="fas fa-phone text-2xl text-blue-600"></i>
-                            <p>+1 (555) 123-4567</p>
-                        </div>
-                        <div class="flex items-center space-x-4">
-                            <i class="fas fa-envelope text-2xl text-blue-600"></i>
-                            <p>info@technova.com</p>
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold mb-2">Business Hours</h3>
+                            <p>Monday - Friday: 9am - 5pm</p>
+                            <p>Saturday - Sunday: Closed</p>
                         </div>
                     </div>
-                    <div class="mt-8">
-                        <h3 class="text-xl font-bold mb-4">Follow Us</h3>
-                        <div class="flex space-x-4">
-                            <a href="#" class="text-2xl text-blue-600 hover:text-blue-800"><i class="fab fa-facebook"></i></a>
-                            <a href="#" class="text-2xl text-blue-600 hover:text-blue-800"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="text-2xl text-blue-600 hover:text-blue-800"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" class="text-2xl text-blue-600 hover:text-blue-800"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div class="mt-8">
-                        <h3 class="text-xl font-bold mb-4">Office Hours</h3>
-                        <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                        <p>Saturday: 10:00 AM - 4:00 PM</p>
-                        <p>Sunday: Closed</p>
+                    <div class="w-full md:w-1/2 px-4">
+                        <form id="contact-form" class="bg-white shadow-md rounded-lg p-8">
+                            <div class="mb-6">
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                                <input type="email" id="email" name="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                                <textarea id="message" name="message" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+                            </div>
+                            <div>
+                                <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-300">Send Message</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 
     <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-wrap justify-between">
-                <div class="w-full m
+        <!-- Footer content (same as index.html) -->
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
